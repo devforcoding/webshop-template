@@ -1,0 +1,31 @@
+.hero {
+  @include flex();
+  height: 100vh;
+
+  @include media-sm() {
+    flex-direction: column;
+  }
+
+  &__item {
+    @include flex-centered();
+    flex-basis:  25%;
+    margin-bottom: 80px;
+    background: center center no-repeat;
+    background-size:cover;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.6);
+    transition: flex-basis .3s;
+    filter: blur(1px);
+
+    &:hover{
+      filter: none;
+      flex-basis: 100%;
+
+    }
+
+  }
+
+
+}
